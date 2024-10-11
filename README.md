@@ -8,6 +8,11 @@
   <a herf="www.linkedin.com/in/mijisu0103" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a herf="https://mjsarchive.notion.site/Tech-log-11c5e786f1f180f88f82e54ea85dd847?pvs=4" target="_blank"><img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion&logoColor=white"/></a>
   <br><br>
+
+* Have a look at my LinkedIn to get to know more about me and my projects 👩🏻‍💻
+* Have a look at my Notion Blog for the record of my study 📚
+
+  <br><br>
 </div>
 
 ---
