@@ -7,7 +7,7 @@
 [![Spotify](https://novatorem.bgstatic.vercel.app/api/spotify)](https://open.spotify.com/artist/5TnQc2N1iKlFjYD7CPGvFc?si=d03f5ce182484f15)<br><br><br>
   <a herf="www.linkedin.com/in/mijisu0103" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a herf="https://mjsarchive.notion.site/Tech-log-11c5e786f1f180f88f82e54ea85dd847?pvs=4" target="_blank"><img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion&logoColor=white"/></a>
-
+  <br><br>
 </div>
 
 ---
