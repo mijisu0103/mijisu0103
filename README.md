@@ -15,9 +15,9 @@
 <body >
  <div  align="center">
 
-<br><br><br><span>&nbsp;&nbsp;&nbsp;&nbsp;![Top Lang](https://github-readme-stats.vercel.app/api/top-langs/?username=mijisu0103&layout=compact&theme=shadow_red)</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br><br><br><span>&nbsp;&nbsp;&nbsp;&nbsp;![Top Lang](https://github-readme-stats.vercel.app/api/top-langs/?username=mijisu0103&layout=compact&theme=shadow_red)</span></span>&nbsp;&nbsp;&nbsp;
 <span> ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=mijisu0103&show_icons=true&theme=graywhite)<br><br><br><br>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;[![Solved.ac Prof](http://mazassumnida.wtf/api/v2/generate_badge?boj=crazy_sus01)](https://solved.ac/profile/crazy_sus01)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span>&nbsp;&nbsp;&nbsp;&nbsp;[![Solved.ac Prof](http://mazassumnida.wtf/api/v2/generate_badge?boj=crazy_sus01)](https://solved.ac/profile/crazy_sus01)</span>&nbsp;&nbsp;&nbsp;
 <span>![Leetcode Stats](https://leetcard.jacoblin.cool/mijisu0103?font=Mulish)</span>
  </div>
 </div>
