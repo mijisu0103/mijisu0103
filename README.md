@@ -10,7 +10,7 @@
   <br><br>
 
 * Have a look at my LinkedIn to get to know more about me and my projects 👩🏻‍💻
-* Have a look at my Notion Blog for the record of my study 📚
+* Have a look at my Notion Blog for the record of my study 📚 (Will be updated soon)
 
   <br><br>
 </div>
