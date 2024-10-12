@@ -21,7 +21,7 @@
 <body >
  <div  align="center">
 
-<br><br><br><span>[![Top_Lang_Light](https://github-readme-stats.vercel.app/api/top-langs/?username=mijisu0103&layout=compact&theme=shadow_red#gh-light-mode-only)](https://github.com/mijisu0103#gh-light-mode-only)&nbsp;&nbsp;&nbsp;
+<br><br><br><span>[![Top_Lang_Light](https://github-readme-stats.vercel.app/api/top-langs/?username=mijisu0103&hide=ipynb&layout=compact&theme=shadow_red#gh-light-mode-only)](https://github.com/mijisu0103#gh-light-mode-only)&nbsp;&nbsp;&nbsp;
 [![Top_Lang_Dark](https://github-readme-stats.vercel.app/api/top-langs/?username=mijisu0103&layout=compact&theme=graywhite#gh-dark-mode-only)](https://github.com/mijisu0103#gh-dark-mode-only)&nbsp;&nbsp;&nbsp;
 <span>![GitHub stats](https://github-readme-stats.vercel.app/api?username=mijisu0103&show_icons=true&theme=graywhite)<br><br><br>
 <span>[![Solved.ac Prof](http://mazassumnida.wtf/api/v2/generate_badge?boj=crazy_sus01)](https://solved.ac/profile/crazy_sus01)</span><br><br><br>
