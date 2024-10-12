@@ -5,9 +5,10 @@
 <div align="center"
 
 [![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=mxz3mdyod6qrp36c2twau4crh&cover_image=true&theme=novatorem&show_offline=false&background_color=121212&interchange=false&bar_color=0061ff&bar_color_cover=true)](https://github.com/kittinan/spotify-github-profile)<br><br><br>
-  <a href="www.linkedin.com/in/mijisu0103" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a hreff="https://mjsarchive.notion.site/Tech-log-11c5e786f1f180f88f82e54ea85dd847?pvs=4" target="_blank"><img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion&logoColor=white"/></a>
+  <a href="https://www.linkedin.com/in/mijisu0103" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://mjsarchive.notion.site/Tech-log-11c5e786f1f180f88f82e54ea85dd847?pvs=4" target="_blank"><img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion&logoColor=white"/></a>
   <br><br>
+
 
 
 * Have a look at my LinkedIn to get to know more about me and my projects 👩🏻‍💻
