@@ -26,7 +26,7 @@
 </p>
 
 ---
-## Experience 📂
+## 📂 &nbsp;&nbsp; Experience
 <details>
 <summary><h3>2025</h3></summary>
 
@@ -79,7 +79,7 @@
 
 
 ---
-## Stats 📈
+## 📈 &nbsp;&nbsp; Stats 
  <div  align="center">
 
 <br><br><br><span>[![Top_Lang_Light](https://github-readme-stats.vercel.app/api/top-langs/?username=mijisu0103&hide=ipynb&layout=compact&theme=shadow_red#gh-light-mode-only)](https://github.com/mijisu0103#gh-light-mode-only)&nbsp;&nbsp;&nbsp;
