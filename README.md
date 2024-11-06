@@ -26,6 +26,16 @@
 </p>
 
 ---
+## 🪪 &nbsp;&nbsp; Certificates
+<p align="center">
+<br><br>
+  <img src="https://miro.medium.com/v2/resize:fit:600/1*415D-ou6S2-FfkULw-b5YA.png" width="150" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://images.credly.com/images/8b8ed108-e77d-4396-ac59-2504583b9d54/cka_from_cncfsite__281_29.png" width="150" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <!--<img src="https://images.credly.com/images/85b9cfc4-257a-4742-878c-4f7ab4a2631b/image.png" width="150" style="filter: grayscale(100%);"/>-->
+  <br><br>
+</p>
+
+---
 ## 📂 &nbsp;&nbsp; Experience
 <details>
 <summary><h3>2025</h3></summary>
