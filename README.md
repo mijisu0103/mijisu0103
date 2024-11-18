@@ -48,18 +48,26 @@
 [qTech & qNomics Interdisciplinary Project](https://github.com/mijisu0103/qTech-qNomics.git)   
 <br>
 </details>
+
 <details>
 <summary><h3>2024</h3></summary>
   
-**October 2024 - February 2025**      
-[qTech & qNomics Interdisciplinary Project](https://github.com/mijisu0103/qTech-qNomics.git)   
+**November 2024 - November 2024**   
+[Covid Dashboard Project](https://github.com/mijisu0103/Covid-Dashboard-Project)
+<br>  
+**October 2024 - February 2025**        
+[qTech & qNomics Interdisciplinary Project](https://github.com/mijisu0103/qTech-qNomics)   
 <br>
-**August 2024 - August 2024** <br> 
+**October 2024 - December 2024**        
+[Database Systems Project for Library Systems](https://github.com/mijisu0103/DB-for-Library-Systems)   
+<br>
+**August 2024 - August 2024**    
 [Footprints Plan]()   
 <br>
-**July 2024 - August 2024**      
-[The first SK AI Data Academy](https://github.com/mijisu0103/SK-AI-Data-Academy.git)   
+**July 2024 - August 2024**         
+[The first SK AI Data Academy](https://github.com/mijisu0103/SK-AI-Data-Academy)   
 </details>
+
 <details>
 <summary><h3>2023</h3></summary>
 
