@@ -40,12 +40,12 @@
 <details>
 <summary><h3>2025</h3></summary>
 
-**June 2025 - September 2025**      
-[Project]()
+**November 2024 - September 2025**      
+[Project](https://github.com/mijisu0103/Project)
 <br>
 
 **October 2024 - February 2025**      
-[qTech & qNomics Interdisciplinary Project](https://github.com/mijisu0103/qTech-qNomics.git)   
+[qTech & qNomics Interdisciplinary Project](https://github.com/mijisu0103/qTech-qNomics)   
 <br>
 </details>
 
@@ -55,9 +55,6 @@
 **November 2024 - November 2024**   
 [Covid Dashboard Project](https://github.com/mijisu0103/Covid-Dashboard-Project)
 <br>  
-**October 2024 - February 2025**        
-[qTech & qNomics Interdisciplinary Project](https://github.com/mijisu0103/qTech-qNomics)   
-<br>
 **October 2024 - December 2024**        
 [Database Systems Project for Library Systems](https://github.com/mijisu0103/DB-for-Library-Systems)   
 <br>
