@@ -71,7 +71,7 @@
 <br>
 **March 2023 - September 2023** <br> 
 [Self-taught Lua, C++ & Unreal Engine 5](https://github.com/mijisu0103/Game-Programming)   
-[C++ study for game programming](https://github.com/mijisu0103/CPP)
+[C++ Study for Game Programming](https://github.com/mijisu0103/CPP)
 </details>
 <details>
 <summary><h3>2022</h3></summary>
