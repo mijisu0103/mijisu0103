@@ -38,11 +38,23 @@
 <details>
 <summary><h3>2025</h3></summary>
 
+**February 2025 - March 2025**      
+[QMML Website]()
+<br>
+
+**February 2025 - March 2025**      
+[Startup Profitability Prediction](https://github.com/mijisu0103/Startup-Profitability-Prediction)
+<br>
+
+**February 2025 - March 2025**      
+[Data Driven Decision Making Risk Analysis](https://github.com/mijisu0103/Data-Driven-Decision-Making-Risk-Analysis)
+<br>
+
 **November 2024 - September 2025**      
 [Project](https://github.com/mijisu0103/Project)
 <br>
 
-**October 2024 - February 2025**      
+**October 2024 - March 2025**      
 [qTech & qNomics Interdisciplinary Project](https://github.com/mijisu0103/qTech-qNomics)   
 <br>
 </details>
@@ -53,7 +65,7 @@
 **November 2024 - November 2024**   
 [Covid Dashboard Project](https://github.com/mijisu0103/Covid-Dashboard-Project)
 <br>  
-**October 2024 - December 2024**        
+**October 2024 - November 2024**        
 [Database Systems Project for Library Systems](https://github.com/mijisu0103/DB-for-Library-Systems)   
 <br>
 **August 2024 - August 2024**    
