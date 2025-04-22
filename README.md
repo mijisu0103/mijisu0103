@@ -19,7 +19,7 @@
 ## 💻 &nbsp;&nbsp; Skills 
 <p align="center">
   <br><br>
-    <img src="https://skillicons.dev/icons?i=aws,linux,docker,kubernetes,jenkins,ansible,terraform,prometheus,grafana,mysql,py,java,spring,cs,unity,cpp,unreal,lua,robloxstudio,html,css,bootstrap,js,threejs,react&theme=light&perline=5" />
+    <img src="https://skillicons.dev/icons?i=aws,linux,docker,kubernetes,jenkins,ansible,terraform,prometheus,grafana,mysql,py,sklearn,pytorch,tensorflow,java,kotlin,spring,supabase,cs,unity,cpp,unreal,lua,robloxstudio,html,css,tailwind,js,ts,nextjs,threejs,react&theme=light&perline=8" />
   <br><br>
 </p>
 
