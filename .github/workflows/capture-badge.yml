@@ -34,6 +34,6 @@ jobs:
         git add badges/tryhackme_badge.png
         COMMIT_MSG="Update TryHackMe badge image - $(date -u '+%Y-%m-%d %H:%M UTC')"
         git commit -m "$COMMIT_MSG" || echo "No changes"
-        git push origin HEAD:badges
+        git push --force origin HEAD:badges
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
