@@ -146,6 +146,9 @@
 
 <span>![Leetcode Stats](https://leetcard.jacoblin.cool/mijisu0103?font=Mulish)</span><br><br><br>
 
+<span>![TryHackMe Badges](https://raw.githubusercontent.com/mijisu0103/mijisu0103/badges/badges/tryhackme_badges.png)</span><br><br><br>
+
+
  </div>
 </div>
 
