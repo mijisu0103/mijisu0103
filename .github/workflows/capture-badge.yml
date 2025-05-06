@@ -31,7 +31,14 @@ jobs:
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
+
+        # Create an orphan branch with no history
+        git checkout --orphan badges-temp
+        git reset
+
+        # Add only the image file
         git add badges/tryhackme_badge.png
+        
         COMMIT_MSG="Update TryHackMe badge image - $(date -u '+%Y-%m-%d %H:%M UTC')"
         git commit -m "$COMMIT_MSG" || echo "No changes"
         git push --force origin HEAD:badges
