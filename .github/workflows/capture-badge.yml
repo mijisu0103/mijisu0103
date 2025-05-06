@@ -1,0 +1,38 @@
+name: Capture TryHackMe Badge
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Run every hour at minute 0 (UTC)
+  workflow_dispatch:     # Allow manual triggering from the GitHub UI
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        ref: badges          # Checkout the 'badges' branch only
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'  # Set the desired Python version
+
+    - name: Install dependencies
+      run: |
+        pip install playwright        # Install Playwright for Python
+        playwright install chromium   # Install Chromium browser
+
+    - name: Capture badge screenshot
+      run: python capture_badge.py   # Run the script to capture the badge
+
+    - name: Commit & Push
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add badges/tryhackme_badge.png
+        git commit -m "Update badge screenshot" || echo "No changes"
+        git push origin badges
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
