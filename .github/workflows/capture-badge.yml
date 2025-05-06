@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
-        ref: badges          # Checkout the 'badges' branch only
+        ref: main          # Checkout main to access the script
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -32,7 +32,8 @@ jobs:
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
         git add badges/tryhackme_badge.png
-        git commit -m "Update badge screenshot" || echo "No changes"
-        git push origin badges
+        COMMIT_MSG="Update TryHackMe badge image - $(date -u '+%Y-%m-%d %H:%M UTC')"
+        git commit -m "$COMMIT_MSG" || echo "No changes"
+        git push origin HEAD:badges
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
