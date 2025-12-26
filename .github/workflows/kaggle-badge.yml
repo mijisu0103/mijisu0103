@@ -1,0 +1,56 @@
+name: Kaggle Badges
+
+on:
+  schedule:
+    - cron: "5 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  create-badges:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-src
+
+      - name: Checkout badges branch
+        uses: actions/checkout@v4
+        with:
+          ref: badges
+          path: badges-branch
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Puppeteer browser
+        run: npx puppeteer browsers install chrome@131.0.6778.85
+
+      - name: Generate Kaggle badges
+        working-directory: main-src
+        uses: spider-man-tm/kaggle-badges@v1.3.0
+        with:
+          user_name: ${{ secrets.KAGGLE_USERNAME }}
+
+      - name: Copy outputs into badges branch
+        run: |
+          rm -rf badges-branch/kaggle-badges badges-branch/kaggle-plates
+          cp -R main-src/kaggle-badges badges-branch/kaggle-badges
+          cp -R main-src/kaggle-plates badges-branch/kaggle-plates
+
+      - name: Commit & push (badges)
+        working-directory: badges-branch
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add kaggle-badges/ kaggle-plates/
+          git commit -m "Update Kaggle badges - $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "No changes"
+          git push origin badges
