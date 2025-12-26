@@ -13,13 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main (generation source)
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
           ref: main
-          path: main-src
+          fetch-depth: 1
 
-      - name: Checkout badges branch (publish target)
+      - name: Checkout badges branch
         uses: actions/checkout@v4
         with:
           ref: badges
@@ -41,6 +41,10 @@ jobs:
 
       - name: Move generated outputs into badges branch
         run: |
+          ls -la
+          ls -la kaggle-badges || true
+          ls -la kaggle-plates || true
+
           rm -rf badges-branch/kaggle-badges badges-branch/kaggle-plates
           cp -R kaggle-badges badges-branch/kaggle-badges
           cp -R kaggle-plates badges-branch/kaggle-plates
@@ -51,5 +55,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add kaggle-badges/ kaggle-plates/
-          git commit -m "chore: update Kaggle badges" || echo "No changes"
+          git commit -m "chore: update Kaggle badges - $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "No changes"
           git push origin badges
