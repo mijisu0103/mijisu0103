@@ -17,13 +17,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 1
-
-      - name: Checkout badges branch
-        uses: actions/checkout@v4
-        with:
-          ref: badges
-          path: badges-branch
           fetch-depth: 0
 
       - name: Setup Node.js
@@ -39,18 +32,18 @@ jobs:
         with:
           user_name: ${{ secrets.KAGGLE_USERNAME }}
 
-      - name: Move generated outputs into badges branch
+      - name: Verify outputs exist
         run: |
-          ls -la
-          ls -la kaggle-badges || true
-          ls -la kaggle-plates || true
+          test -d kaggle-badges
+          test -d kaggle-plates
+          ls -la kaggle-badges kaggle-plates | head
 
-          rm -rf badges-branch/kaggle-badges badges-branch/kaggle-plates
-          cp -R kaggle-badges badges-branch/kaggle-badges
-          cp -R kaggle-plates badges-branch/kaggle-plates
+      - name: Switch to badges branch
+        run: |
+          git fetch origin badges
+          git checkout badges
 
-      - name: Commit & push (badges)
-        working-directory: badges-branch
+      - name: Commit and push SVG files (badges branch)
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
