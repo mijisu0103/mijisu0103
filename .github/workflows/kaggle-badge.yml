@@ -13,13 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main
+      - name: Checkout main (generation source)
         uses: actions/checkout@v4
         with:
           ref: main
           path: main-src
 
-      - name: Checkout badges branch
+      - name: Checkout badges branch (publish target)
         uses: actions/checkout@v4
         with:
           ref: badges
@@ -35,16 +35,15 @@ jobs:
         run: npx puppeteer browsers install chrome@131.0.6778.85
 
       - name: Generate Kaggle badges
-        working-directory: main-src
         uses: spider-man-tm/kaggle-badges@v1.3.0
         with:
           user_name: ${{ secrets.KAGGLE_USERNAME }}
 
-      - name: Copy outputs into badges branch
+      - name: Move generated outputs into badges branch
         run: |
           rm -rf badges-branch/kaggle-badges badges-branch/kaggle-plates
-          cp -R main-src/kaggle-badges badges-branch/kaggle-badges
-          cp -R main-src/kaggle-plates badges-branch/kaggle-plates
+          cp -R kaggle-badges badges-branch/kaggle-badges
+          cp -R kaggle-plates badges-branch/kaggle-plates
 
       - name: Commit & push (badges)
         working-directory: badges-branch
@@ -52,5 +51,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add kaggle-badges/ kaggle-plates/
-          git commit -m "Update Kaggle badges - $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "No changes"
+          git commit -m "chore: update Kaggle badges" || echo "No changes"
           git push origin badges
