@@ -2,45 +2,54 @@ name: Capture TryHackMe Badge
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Run daily at midnight (UTC)
-  workflow_dispatch:     # Allow manual triggering from the GitHub UI
+    - cron: "0 0 * * *" 
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   capture:
-    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
+    runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-      with:
-        ref: main          # Checkout main to access the script
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-src
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'  # Set the desired Python version
+      - name: Checkout badges branch
+        uses: actions/checkout@v4
+        with:
+          ref: badges
+          path: badges-branch
+          fetch-depth: 0
 
-    - name: Install dependencies
-      run: |
-        pip install playwright        # Install Playwright for Python
-        playwright install chromium   # Install Chromium browser
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
 
-    - name: Capture badge screenshot
-      run: python capture_badge.py   # Run the script to capture the badge
+      - name: Install dependencies
+        run: |
+          pip install playwright
+          playwright install chromium
 
-    - name: Commit & Push
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@github.com"
+      - name: Capture badge screenshot
+        working-directory: main-src
+        run: python capture_badge.py
 
-        # Create an orphan branch with no history
-        git checkout --orphan badges-temp
-        git reset
+      - name: Copy output into badges branch
+        run: |
+          mkdir -p badges-branch/badges
+          cp main-src/badges/tryhackme_badge.png badges-branch/badges/tryhackme_badge.png
 
-        # Add only the image file
-        git add badges/tryhackme_badge.png
-        
-        COMMIT_MSG="Update TryHackMe badge image - $(date -u '+%Y-%m-%d %H:%M UTC')"
-        git commit -m "$COMMIT_MSG" || echo "No changes"
-        git push --force origin HEAD:badges
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
+      - name: Commit & push (badges)
+        working-directory: badges-branch
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add badges/tryhackme_badge.png
+          git commit -m "Update TryHackMe badge - $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "No changes"
+          git push origin badges
