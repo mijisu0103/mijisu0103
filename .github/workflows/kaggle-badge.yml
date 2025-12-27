@@ -1,6 +1,9 @@
-name: Kaggle Badges (baseline)
+name: Kaggle Badges
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: "5 0 * * *"
   workflow_dispatch:
@@ -13,8 +16,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository (main)
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -29,14 +35,15 @@ jobs:
         with:
           user_name: ${{ secrets.KAGGLE_USERNAME }}
 
-      - name: Debug outputs (before commit)
+      - name: Verify outputs exist
         run: |
-          echo "=== ls -la ==="
-          ls -la
-          echo "=== find kaggle* dirs ==="
-          find . -maxdepth 3 -type d -name "kaggle*" -print || true
-          echo "=== find svg ==="
-          find . -maxdepth 5 -type f -name "*.svg" | head -n 50 || true
+          test -d kaggle-badges
+          test -d kaggle-plates
+
+      - name: Switch to badges branch
+        run: |
+          git fetch origin badges
+          git checkout badges
 
       - name: Commit and Push SVG files
         run: |
