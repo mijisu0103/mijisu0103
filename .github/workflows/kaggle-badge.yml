@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository (main)
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
           ref: main
@@ -35,17 +35,24 @@ jobs:
         with:
           user_name: ${{ secrets.KAGGLE_USERNAME }}
 
-      - name: Verify outputs exist
+      - name: Check outputs (skip if empty)
+        id: check_outputs
         run: |
-          test -d kaggle-badges
-          test -d kaggle-plates
+          if [ -d "kaggle-badges" ] && [ -d "kaggle-plates" ]; then
+            echo "found=true" >> $GITHUB_OUTPUT
+          else
+            echo "found=false" >> $GITHUB_OUTPUT
+            echo "No Kaggle categories yet -> skipping commit."
+          fi
 
       - name: Switch to badges branch
+        if: steps.check_outputs.outputs.found == 'true'
         run: |
           git fetch origin badges
           git checkout badges
 
-      - name: Commit and Push SVG files
+      - name: Commit and Push SVG files (badges branch)
+        if: steps.check_outputs.outputs.found == 'true'
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
