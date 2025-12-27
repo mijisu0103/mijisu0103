@@ -1,4 +1,4 @@
-name: Kaggle Badges
+name: Kaggle Badges (baseline)
 
 on:
   schedule:
@@ -13,11 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -27,23 +24,21 @@ jobs:
       - name: Install Puppeteer browser
         run: npx puppeteer browsers install chrome@131.0.6778.85
 
-      - name: Generate Kaggle badges
+      - name: Use Kaggle Badges Action
         uses: spider-man-tm/kaggle-badges@v1.3.0
         with:
           user_name: ${{ secrets.KAGGLE_USERNAME }}
 
-      - name: Verify outputs exist
+      - name: Debug outputs (before commit)
         run: |
-          test -d kaggle-badges
-          test -d kaggle-plates
-          ls -la kaggle-badges kaggle-plates | head
+          echo "=== ls -la ==="
+          ls -la
+          echo "=== find kaggle* dirs ==="
+          find . -maxdepth 3 -type d -name "kaggle*" -print || true
+          echo "=== find svg ==="
+          find . -maxdepth 5 -type f -name "*.svg" | head -n 50 || true
 
-      - name: Switch to badges branch
-        run: |
-          git fetch origin badges
-          git checkout badges
-
-      - name: Commit and push SVG files (badges branch)
+      - name: Commit and Push SVG files
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
