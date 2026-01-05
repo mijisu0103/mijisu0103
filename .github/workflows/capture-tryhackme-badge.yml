@@ -1,0 +1,55 @@
+name: Capture TryHackMe Badge
+
+on:
+  schedule:
+    - cron: "0 0 * * *" 
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-src
+
+      - name: Checkout badges branch
+        uses: actions/checkout@v4
+        with:
+          ref: badges
+          path: badges-branch
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          pip install playwright
+          playwright install chromium
+
+      - name: Capture badge screenshot
+        working-directory: main-src
+        run: python capture_badge.py
+
+      - name: Copy output into badges branch
+        run: |
+          mkdir -p badges-branch/badges
+          cp main-src/badges/tryhackme_badge.png badges-branch/badges/tryhackme_badge.png
+
+      - name: Commit & push (badges)
+        working-directory: badges-branch
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add badges/tryhackme_badge.png
+          git commit -m "Update TryHackMe badge - $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "No changes"
+          git push origin badges

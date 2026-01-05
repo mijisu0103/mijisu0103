@@ -1,0 +1,58 @@
+name: Update DACON Badge
+
+on:
+  schedule:
+    - cron: "15 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-src
+
+      - name: Checkout badges branch
+        uses: actions/checkout@v4
+        with:
+          ref: badges
+          path: badges-branch
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y librsvg2-bin
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 lxml
+
+      - name: Run dacon.py
+        working-directory: main-src
+        run: python dacon.py
+
+      - name: Convert SVG to PNG
+        run: |
+          rsvg-convert -w 850 -h 250 main-src/badges/dacon.svg -o badges-branch/badges/dacon_badge.png
+
+      - name: Commit & push (badges)
+        working-directory: badges-branch
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add badges/dacon_badge.png
+          git commit -m "Update DACON badge - $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "No changes"
+          git push origin badges

@@ -1,0 +1,61 @@
+name: Kaggle Badges
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "5 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  create-badges:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Puppeteer browser
+        run: npx puppeteer browsers install chrome@131.0.6778.85
+
+      - name: Use Kaggle Badges Action
+        uses: spider-man-tm/kaggle-badges@v1.3.0
+        with:
+          user_name: ${{ secrets.KAGGLE_USERNAME }}
+
+      - name: Check outputs (skip if empty)
+        id: check_outputs
+        run: |
+          if [ -d "kaggle-badges" ] && [ -d "kaggle-plates" ]; then
+            echo "found=true" >> $GITHUB_OUTPUT
+          else
+            echo "found=false" >> $GITHUB_OUTPUT
+            echo "No Kaggle categories yet -> skipping commit."
+          fi
+
+      - name: Switch to badges branch
+        if: steps.check_outputs.outputs.found == 'true'
+        run: |
+          git fetch origin badges
+          git checkout badges
+
+      - name: Commit and Push SVG files (badges branch)
+        if: steps.check_outputs.outputs.found == 'true'
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add kaggle-badges/ kaggle-plates/
+          git commit -m "chore: update Kaggle badges - $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "No changes"
+          git push origin badges
