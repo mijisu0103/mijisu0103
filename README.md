@@ -55,7 +55,7 @@ Aug 2025 – Aug 2025 | The 7th LG Aimers - Phase II Hackathon | `Time Series Fo
 
 | | Period | Project | Description | Link |
 |---|---|---|---|---|
-| 🪪 | Jan 2026 – Jan 2026 | Dacon badge updater | Designed and implemented an automated workflow to generate and update a static Dacon badge image for GitHub README | []() |
+| 🪪 | Jan 2026 – Jan 2026 | Dacon badge updater | Designed and implemented an automated workflow to generate and update a static Dacon badge image for GitHub README | [🔗](https://github.com/mijisu0103#-data-practice) |
 
 </details>
 
@@ -72,7 +72,7 @@ Aug 2025 – Aug 2025 | The 7th LG Aimers - Phase II Hackathon | `Time Series Fo
 | 🧠 | Jul 2025 – Aug 2025 | SK AI Dream Camp | Completed practical training in machine learning and deep learning, competed in AI competitions using real-world data from SK Group affiliates | []() |
 | 💷 | Jul 2025 – Jul 2025 | FinQ | Built an LLM-powered financial query agent to deliver real-time insights on KOSPI, KOSDAQ, and KONEX stocks with domain-specific reasoning | []() |
 | 👩🏻‍🏫 | May 2025 – May 2025 | Degree Pilot | Developed a generative AI chatbot with agent-like reasoning to recommend UCL modules based on students' academic backgrounds and goals | []() |
-| 🪪 | May 2025 – May 2025 | TryHackMe badge updater | Designed and implemented an automated workflow to generate and update a static TryHackMe badge image for GitHub README | []() |
+| 🪪 | May 2025 – May 2025 | TryHackMe badge updater | Designed and implemented an automated workflow to generate and update a static TryHackMe badge image for GitHub README | [🔗](https://github.com/mijisu0103#-security-practice) |
 | 🧭 | Apr 2025 – Apr 2025 | CodePath | Built an AI-powered personalised developer dashboard that analyses GitHub activity and tech trend newsletters to generate tailored learning paths | []() |
 | 💜 | Apr 2025 – Apr 2025 | Hero Tech Course Berlin Edition: Pre-course | Built two command-line applications in Kotlin | [🔗](https://github.com/mijisu0103/herotech-precourse) |
 | 🧠 | Mar 2025 – Apr 2025 | QMML Website | Designed and developed the official website for the Queen Mary Machine Learning Society | [🔗](https://qmml-website.vercel.app) |
