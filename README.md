@@ -1,6 +1,6 @@
 <div align="center">
 
-![header](https://capsule-render.vercel.app/api?type=venom&color=gradient&height=200&text=Jisu%20Park&fontSize=50&fontColor=F0F0F0&fontAlignY=40&desc=Incoming%20Data%20@%20Bloomberg%20&descSize=20&descAlignY=65&animation=twinkling&stroke=F0F0F0A&strokeWidth=2)
+![header](https://capsule-render.vercel.app/api?type=venom&color=gradient&height=200&text=Jisu%20Park&fontSize=60&fontColor=F0F0F0&fontAlignY=40&desc=Incoming%20Data%20@%20Bloomberg%20&descSize=20&descAlignY=67&animation=twinkling&stroke=F0F0F0A&strokeWidth=2)
 
 ## 👩🏻‍💻&nbsp;&nbsp; About Me
 
