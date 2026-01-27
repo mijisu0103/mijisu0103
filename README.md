@@ -55,8 +55,8 @@ Aug 2025 – Aug 2025 | The 7th LG Aimers - Phase II Hackathon | `Time Series Fo
 
 | | Period | Project | Description | Link |
 |---|---|---|---|---|
-| 💷 | Jan 2026 – Feb 2026 | FinNotes |  | [🔗]() |
-| 🆚 | Jan 2026 – Jan 2026 | Versus | Developed Versus, enabling beginners to express market narratives through intuitive relative trades executed on Hyperliquid via the Pear Execution API | [🔗]() |
+| 💷 | Jan 2026 – Feb 2026 | FinNotes |  | []() |
+| 🆚 | Jan 2026 – Jan 2026 | Versus | Developed Versus, enabling beginners to express market narratives through intuitive relative trades executed on Hyperliquid via the Pear Execution API | []() |
 | 🪪 | Jan 2026 – Jan 2026 | Dacon badge updater | Designed and implemented an automated workflow to generate and update a static Dacon badge image for GitHub README | [🔗](https://github.com/mijisu0103#-data-practice) |
 
 </details>
